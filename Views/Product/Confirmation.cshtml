@@ -1,0 +1,81 @@
+﻿@{
+    ViewData["Title"] = "Confirmation";
+}
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Confirmation</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+        }
+
+        .container {
+            max-width: 400px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.6);
+        }
+
+        .logo {
+            max-width: 150px; 
+            display: block; 
+            margin: 0 auto; 
+            margin-bottom: 20px;
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        p {
+            text-align: center;
+            font-size: 18px;
+        }
+        .return-button-container {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        .return-button {
+            display: block;
+            width: 38%;
+            padding: 10px;
+            background-color: #3498db;
+            color: #fff;
+            text-align: center;
+            text-decoration: none;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
+            transition: background-color 0.3s ease;
+        }
+
+            .return-button:hover {
+                background-color: #2980b9;
+            }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="~/public/company-logo1@2x.png" alt="Logo" class="logo">
+        <h2>Thank you for submitting the form!</h2>
+        <p>Your Product record has been successfully recorded.</p>
+        <div class="return-button-container">
+            <a href="~/Product/Record" class="return-button">Return to Homepage</a>
+        </div>
+    </div>
+</body>
+</html>

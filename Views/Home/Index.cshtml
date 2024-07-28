@@ -1,0 +1,47 @@
+﻿@{
+    ViewData["Title"] = "Home";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@section Head {
+    <title> Number one Shop for Motorcycle and Vehicle Gears </title>
+}
+<div class="container">
+    <!-- Image-slider -->
+    <div class="slider">
+        <img class="engine-oil-banner" alt="Engine oil" src="~/public/engineoilbanner@2x.png" />
+        <img class="helmet-banner" alt="Helmet" src="~/public/helmet-banner.jpg" />
+        <img class="glove-banner" alt="Glove" src="~/public/gloves.jpg">
+    </div>
+
+    <!-- e-commerce-app-product-section -->
+    <div class="e-commerce-app-body-section">
+        <div class="e-commerce-app-body-section1"></div>
+        <b class="products">Products</b>
+
+        <img class="product-1-icon" alt="" src="~/public/product1@2x.png" />
+        <b class="product-text">Liqui Moly</b>
+        <button class="product-button">
+            <a href="~/Home/Shop" style="text-decoration: none; color: black;">
+                <span class="product-button-text" onmouseover="this.style.color='yellow'" onmouseout="this.style.color='black'">Browse</span>
+            </a>
+        </button>
+
+        <img class="product-2-icon" alt="" src="~/public/product2@2x.png" />
+        <b class="product-text-2">Vesrah</b>
+        <button class="product-button-1">
+            <a href="~/Home/Shop" style="text-decoration: none; color: black;">
+                <span class="product-button-text-1" onmouseover="this.style.color='yellow'" onmouseout="this.style.color='black'">Browse</span>
+            </a>
+        </button>
+
+        <img class="product-3-icon" alt="" src="~/public/product3@2x.png" />
+        <b class="product-text-3">Alpinestars</b>
+        <button class="product-button-2">
+            <a href="~/Home/Shop" style="text-decoration: none; color: black;">
+                <span class="product-button-text-2" onmouseover="this.style.color='yellow'" onmouseout="this.style.color='black'">Browse</span>
+            </a>
+        </button>
+
+    </div>
+</div>

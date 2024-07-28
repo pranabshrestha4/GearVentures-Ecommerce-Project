@@ -1,0 +1,193 @@
+/* e-commerce-app-body-section */
+.e-commerce-app-body-section1,
+.slider {
+  width: 1518px;
+  height: 602.64px;
+  overflow: hidden;
+  position: absolute;
+  top: 160px; 
+}
+
+.slider img {
+  width: 1518px;
+  height: 602.64px;
+  object-fit: cover;
+  position: absolute;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+.slider img:first-child {
+  opacity: 1;
+}
+
+.e-commerce-app-body-section1 {
+  top: 0;
+  background-color: var(--color-white);
+  height: 596px;
+}
+
+.product-1-icon,
+.products {
+  position: absolute;
+  top: 46px;
+  left: 688px;
+}
+.product-1-icon {
+  top: 111px;
+  left: 117px;
+  width: 382px;
+  height: 288px;
+  object-fit: cover;
+}
+.product-text {
+  position: absolute;
+  top: 410px;
+  left: 241px;
+}
+
+.product-button {
+  background-color: var(--color-yellow); 
+  color: black; 
+  width: 90px; 
+  height: 33px; 
+  border: none; 
+  border-radius: 5px; 
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.4); 
+  cursor: pointer; 
+  position: absolute; 
+  top: 470px; 
+  left: 270px;
+  z-index: 1;
+  transition: background-color 0.3s, color 0.3s, box-shadow 0.3s;  
+}
+
+
+.product-button-text {
+  font-size: 16px; 
+  padding: 6px 12px; 
+  font-weight: bold;
+}
+
+.product-button:hover {
+  background-color: black;
+  color: var(--color-yellow);
+  box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.6);
+  transform: translateY(-5px); /* Move the button up slightly on hover */
+  transition: background-color 0.3s, color 0.3s, box-shadow 0.3s, transform 0.3s;
+}
+
+
+
+.product-2-icon {
+  position: absolute;
+  top: 143px;
+  left: 615px;
+  width: 316px;
+  height: 238px;
+  object-fit: cover;
+}
+.product-text-2 {
+  position: absolute;
+  top: 409px;
+  left: 713px;
+}
+.product-button-1 {
+  background-color: var(--color-yellow); 
+  color: black; 
+  width: 90px; 
+  height: 33px; 
+  border: none; 
+  border-radius: 5px; 
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.4); 
+  cursor: pointer; 
+  position: absolute; 
+  top: 470px; 
+  left: 730px;
+  z-index: 1;
+  transition: background-color 0.3s, color 0.3s, box-shadow 0.3s;   
+}
+
+.product-button-text-1 {
+  font-size: 16px; 
+  padding: 6px 12px; 
+  font-weight: bold;
+}
+
+.product-button-1:hover {
+  background-color: black;
+  color: var(--color-yellow);
+  box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.6);
+  transform: translateY(-5px);
+  transition: background-color 0.3s, color 0.3s, box-shadow 0.3s, transform 0.3s;
+}
+
+.product-3-icon {
+  position: absolute;
+  top: 156px;
+  left: 1041px;
+  width: 404px;
+  height: 223px;
+  object-fit: cover;
+}
+.product-text-3 {
+  position: absolute;
+  top: 410px;
+  left: 1128px;
+}
+
+
+.product-button-2 {
+  background-color: var(--color-yellow); 
+  color: black; 
+  width: 90px; 
+  height: 33px; 
+  border: none; 
+  border-radius: 5px; 
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.4); 
+  cursor: pointer; 
+  position: absolute; 
+  top: 470px; 
+  right: 240px;
+  z-index: 1;
+  transition: background-color 0.3s, color 0.3s, box-shadow 0.3s; 
+}
+
+.product-button-text-2 {
+  font-size: 16px; 
+  padding: 6px 12px; 
+  font-weight: bold;
+}
+
+.product-button-2:hover {
+  background-color: black;
+  color: var(--color-yellow);
+  box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.6);
+  transform: translateY(-5px);
+  transition: background-color 0.3s, color 0.3s, box-shadow 0.3s, transform 0.3s;
+}
+
+@keyframes scaleUp {
+  from {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.e-commerce-app-body-section {
+  position: absolute;
+  top: 765px;
+  left: 0;
+  width: 1518px;
+  height: 596px;
+  font-size: var(--font-size-17xl);
+}
+
+.animate {
+    animation: scaleUp 1s ease-in-out;
+}
+

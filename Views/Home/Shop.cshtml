@@ -1,0 +1,79 @@
+﻿@model PaginatedList<GearVentures.Models.ProductRecordViewModel>
+@{
+    ViewData["Title"] = "Shop";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@section Head {
+    <title> Shop: Gear Ventures Nepal </title>
+}
+<script src="~/js/container.js"></script>
+
+
+
+<div class="container">
+    <div class="shop-container">
+        <div class="search-container">
+            <form asp-controller="Home" asp-action="Search" method="get">
+                <input type="text" name="searchQuery" placeholder="Search by Name">
+                <button type="submit">Search</button>
+            </form>
+        </div>
+
+        @foreach (var product in Model.Items)
+        {
+            <div class="shop-container-@(product.Id)">
+                <img class="product-image-icon" alt="" src="@product.PhotoUrl" />
+                <b class="name">Name:</b>
+                <b class="liqui-moly-engine">@product.Name</b>
+                <b class="quantity">Quantity:</b>
+                <b class="piece">@product.Quantity Piece</b>
+                <b class="status">Status:</b>
+                <b class="@(product.Status.ToLower() == "in stock" ? "in-stock" : "out-of-stock")">@product.Status</b>
+                <b class="price">Price:</b>
+                <b class="rs-600">Rs. @product.Price</b>
+                <form asp-controller="Home" asp-action="AddToCart" method="post">
+                    <input type="hidden" name="productName" value="@product.Name" />
+                    <input type="hidden" name="price" value="@product.Price" />
+                    <input type="hidden" name="photoUrl" value="@product.PhotoUrl" />
+                    <button type="submit" class="cart-button">
+                        <span class="cart-button-text">Add to Cart</span>
+                    </button>
+                </form>
+
+
+            </div>
+        }
+
+        <div class="pagination">
+            @for (int i = 1; i <= Model.TotalPages; i++)
+            {
+                <a asp-action="Shop" asp-route-page="@i" class="@(i == Model.PageIndex ? "selected" : "")">@i</a>
+            }
+        </div>
+    </div>
+</div>
+
+
+
+<script>
+    document.querySelectorAll('form button.cart-button').forEach(function (button) {
+        button.closest('form').addEventListener('submit', function (event) {
+            event.preventDefault();
+
+            var sweetAlertMessage = "Product added to cart!";
+            var sweetAlertType = "success";
+
+            Swal.fire({
+                title: sweetAlertMessage,
+                icon: sweetAlertType,
+                showConfirmButton: true
+            }).then(function () {
+                event.target.submit();
+            });
+        });
+    });
+</script>
+
+
+

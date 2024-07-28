@@ -1,0 +1,68 @@
+﻿@{
+    ViewData["Title"] = "Contact us";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@section Head {
+    <title> Contact: GearVenturesNepal</title>
+}
+
+<div class="container">
+    <div class="navigation-bar-down">
+        <div class="navigation-bar-down-ui"></div>
+        <b class="contact2 ">Contact</b>
+    </div>
+    <div class="contact-information">
+        <div class="contact-info-box"></div>
+        <div class="map">
+            <img class="location-icon" alt="" src="~/public/locationicon@2x.png" />
+            <b class="location-header">Our Address</b>
+            <div class="location-text">Anamnagar ,Kathmandu</div>
+            <div class="location-text-kathmandu">Kathmandu Nepal</div>
+        </div>
+        <div class="email">
+            <img class="mail-icon-white-on-grey-1" alt="" src="~/public/mailiconwhiteongrey-1@2x.png">
+            <b class="our-email-address">Our Email Address</b>
+            <div class="feel-free-to">Feel Free to Email us</div>
+            <div class="pranabshrestha4gmailcom">pranabshrestha4@gmail.com</div>
+        </div>
+        <div class="contact1">
+            <img class="icon-1" alt="" src="~/public/phone-icon.png" />
+            <b class="our-contact-phone">Our Contact Phone</b>
+            <div class="make-your-phone">Make your phone order to:</div>
+            <div class="div">9861143145</div>
+        </div>
+    </div>
+
+    <div class="message-information-container">
+        <div class="map-container">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3533.763620884649!2d85.3267369!3d27.6923076!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb196d09ba4679%3A0x3f8682ae9ac59637!2sGearVentures!5e0!3m2!1sen!2snp!4v1637742675911!5m2!1sen!2snp" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+
+        <b class="header-text-2">Send your Message</b>
+        <div class="vertical-line"></div>
+        <form asp-controller="Mail" asp-action="SendEmail" id="frm_Mail" method="post">
+            <b class="name-header">Name</b>
+            <div class="name-box">
+                <input type="text" name="Name" placeholder="Enter Your Name">
+            </div>
+
+            <b class="email-header">Email</b>
+            <div class="email-box-4">
+                <input type="email" name="Email" placeholder="Enter Your Email">
+            </div>
+
+            <b class="message">Message</b>
+            <div class="message-box-1">
+                <textarea name="Message" class="message-input-1" placeholder="Message"></textarea>
+            </div>
+
+            <button type="submit" class="message-button-1">
+                <span class="message-button-text-1"> Send Your Message </span>
+            </button>
+        </form>
+    </div>
+</div>
+
+
+

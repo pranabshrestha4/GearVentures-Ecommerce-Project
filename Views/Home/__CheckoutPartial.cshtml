@@ -1,0 +1,42 @@
+﻿@model OrderModel
+@{
+    decimal cartTotal = 0;
+}
+
+<table>
+    <thead>
+        <tr style="position:relative; top:470px; left:55px;">
+            <th style="font-size:18px;">Product Name</th>
+            <th style="position:relative; left:200px; font-size:18px;">Photo</th>
+            <th style="position:relative; left:450px; font-size:18px;">Price</th>
+        </tr>
+        <hr style="position:relative; top:520px; margin-left:60px; width:54%;" />
+    </thead>
+    <tbody>
+        @if (Model != null && Model.CartItems != null)
+        {
+            foreach (var cartItem in Model.CartItems)
+            {
+                if (cartItem != null)
+                {
+                    decimal itemPrice = decimal.Parse(cartItem.Price.Replace("Rs", "").Trim());
+                    cartTotal += itemPrice;
+                    <tr style="position:relative; top:500px; left:100px;">
+                        <td style="position:relative; right:50px;">@cartItem.ProductName</td>
+                        <td style="position:relative; left:150px;">
+                            <img src="@cartItem.PhotoUrl" alt="Product Image" style="max-width: 50px; max-height: 50px;" />
+                        </td>
+                        <td style="position:relative; left:390px;"> Rs @cartItem.Price</td>
+                    </tr>
+                }
+            }
+        }
+    </tbody>
+</table>
+
+<h2 style="position:relative; top:550px; left:50px; font-size: 25px;">YOUR ORDER</h2>
+<hr style="width:50px; border: 5px solid #FFA500; position:relative; margin-left:50px; top:540px;" />
+<p style="position:relative; top:545px; left:50px; font-weight:bold;">Cart Total:</p>
+<span style="left: 470px; top:500px; position:relative; font-weight:bold;" id="subtotal"> Rs @cartTotal  </span>
+<hr style="position:relative; top:510px; margin-left:50px; width:35%;" />
+

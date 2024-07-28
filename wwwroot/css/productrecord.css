@@ -1,0 +1,50 @@
+.navigation-bar-down {
+    top: 100px;
+    height: 51px;
+    font-size: 16px;
+    position: absolute;
+    left: 0;
+    width: 1518px;
+}
+
+.navigation-bar-down-ui {
+    background-color: #d9d9d9;
+    position: absolute;
+    top: 55px;
+    left: 0;
+    width: 1518px;
+    height: 51px;
+}
+
+.navbar-text {
+    position: absolute;
+    top: 11px;
+    left: 201px;
+    background:black;
+}
+
+.product-body-container {
+    position: absolute;
+    top: 211px;
+    left: 0;
+    background-color: white;
+    width: 1518px;
+    height: 1145px;
+}
+
+.product-container {
+    position: absolute;
+    top: 249px;
+    left: 88px;
+    width: 1307px;
+    height: 910px;
+}
+
+.product-container-1 {
+    position: absolute;
+    top: 50px;
+    left: 150px;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.5);
+    width: 1000px;
+    height: 411px;
+}

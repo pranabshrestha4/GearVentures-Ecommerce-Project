@@ -1,0 +1,237 @@
+﻿@using GearVentures.Models
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="initial-scale=1, width=device-width" />
+    <link rel="stylesheet" href="~/css/layout.css" />
+    <link rel="stylesheet" href="~/css/about.css" />
+    <link rel="stylesheet" href="~/css/index.css" />
+    <link rel="stylesheet" href="~/css/contact.css" />
+    <link rel="stylesheet" href="~/css/shop.css" />
+    <link rel="stylesheet" href="~/css/productrecord.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Arial:wght@400;700&display=swap" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Arial GEO:wght@700&display=swap" />
+    <link rel="icon" type="image/x-icon" href="~/public/company-logo1@2x.png" sizes="32x32">
+    @RenderSection("Head", required: false)
+</head>
+<body>
+    <div class="e-commerce-app">
+        <!-- Widget-bar -->
+        <div class="widget-bar">
+            <div class="widget-bar1">
+                <div class="widget-bar-child">
+                </div>
+                <a href="https://www.instagram.com/sthpranab/?next=%2F">
+                    <img class="instagram-icon2x-1" alt="" src="~/public/instagram-icon@2x.png">
+                </a>
+                <a href="https://www.facebook.com/pranab.shrestha.4">
+                    <img class="facebook-icon" alt="" src="~/public/facebook-icon.png">
+                </a>
+            </div>
+        </div>
+
+        <!-- Navbar -->
+        <div class="navbar">
+            <div class="navbar1"></div>
+            <img class="company-logo-icon" alt="" src="~/public/company-logo@2x.png" />
+            <b class="home"><a href="~/"> Home</a></b>
+            <b class="about"><a href="~/Home/About"> About</a></b>
+            <b class="shop"><a href="~/Home/Shop"> Shop</a></b>
+            <div class="dropdown">
+                <b class="explore"><a href="#explore"> Explore</a></b>
+                <div class="dropdown-content">
+                    <a href="~/Home/Shop">Liqui Moly</a>
+                    <a href="~/Home/Shop">Vesrah</a>
+                    <a href="~/Home/Shop">AlpineStars</a>
+                    <div class="logo-container">
+                        <img class="dropdown-logo" alt="" src="~/public/gvn-logo-3@2x.png" />
+                    </div>
+                </div>
+            </div>
+            <b class="contact"><a href="~/Home/Contact"> Contact</a></b>
+            <button class="shopping-cart-button" onclick="loadCart()">
+                <img class="shopping-cart-icon" alt="" src="~/public/shoppingcarticon@2x.png" />
+                <div class="dropdown-content-cart">
+                    @{
+                        var cartViewModel = new CartViewModel { CartItems = new List<CartItem>() }; 
+                    }
+                    @Html.Partial("_CartPartial", cartViewModel)
+                </div>
+            </button>
+        </div>
+
+
+        <div class="container">
+            @RenderBody()
+        </div>
+
+        <!-- Footer-top -->
+        <div class="footer-top">
+            <div class="footer-top1"></div>
+            <img class="company-logo-icon1" alt="" src="~/public/company-logo1@2x.png" />
+            <b class="text">
+                <p class="the-goal-of">The goal of the GearVentures Nepal is to</p>
+                <p class="the-goal-of"> fulfill the requirements of Nepali motorcycle </p>
+                <p class="the-goal-of"> riders with genuine and quality international </p>
+                <p class="the-goal-of">products to improve their riding experience</p>
+                <p class="the-goal-of">and safety.</p>
+            </b>
+
+            <img class="map-icon" alt="" src="~/public/mapicon@2x.png" />
+            <b class="location">Anamnagar Kathmandu</b>
+            <img class="mail-icon" alt="" src="~/public/mailicon@2x.png" />
+            <b class="mail">gearventuresnepal@gmail.com</b>
+            <img class="phone-icon" alt="" src="~/public/phoneicon@2x.png" />
+            <b class="phone-number">9861143145</b>
+            <b class="contact-us">Contact Us</b>
+
+            <form asp-controller="FooterMail" asp-action="FooterSendEmail" id="footer_frm_Mail" method="post">
+                <div class="email-box">
+                    <div class="email-box1">
+                        <input type="email" id="email" name="Email" placeholder="Email"> 
+                    </div>
+                </div>
+
+                <div class="message-box">
+                    <textarea class="message-input" name="Message" placeholder="Message"></textarea> 
+                </div>
+
+                <button class="message-button">
+                    <span class="message-button-text"> Send Message </span>
+                </button>
+            </form>
+        </div>
+
+        <!-- Footer -->
+        <div class="footer">
+            <div class="footer1"></div>
+            <div class="footer-text">
+                <b class="copyright-gearventures-nepal">
+                    2024 Copyright GearVentures Nepal All rights Reserved
+                </b>
+                <b class="developed-by-pranab">Developed by Pranab Shrestha</b>
+        </div>
+    </div>
+        <script src="~/js/footer-animation.js"></script>
+        <script src="~/js/imageslider.js"></script>
+        <script src="~/js/scale-up-animation-footer-top.js"></script>
+        <script src="~/js/scale-up-animation.js"></script>
+        <script src="~/js/scale-up-animation-about-us.js"></script>
+        <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+        <script>
+            $(document).ready(function () {
+                $('.message-button-1').on('click', function (e) {
+                    e.preventDefault();
+                    $.ajax({
+                        url: $('#frm_Mail').attr('action'),
+                        type: 'POST',
+                        data: $('#frm_Mail').serialize(),
+                        success: function (data) {
+                            if (data.success == true) {
+                                Swal.fire({
+                                    title: "Success!",
+                                    text: "Message sent sucessfully",
+                                    icon: "success",
+                                    confirmButtonColor: "#3085d6",
+                                    confirmButtonText: "OK",
+                                }).then(function (result) {
+                                    if (result.isConfirmed) {
+                                        window.location.href = '/Home/Index'; 
+                                    }
+                                });
+                            } else {
+                                Swal.fire({
+                                    title: "Error!",
+                                    text: "Please enter the data",
+                                    icon: "error",
+                                    confirmButtonColor: "#3085d6",
+                                    confirmButtonText: "OK",
+                                })
+                            }
+                        },
+                        error: function (xhr, status, error) {
+                            Swal.fire({
+                                title: "Error!",
+                                text: "An error occurred while sending your message.Please try again later.",
+                                icon: "error",
+                                confirmButtonColor: "#3085d6",
+                                confirmButtonText: "OK",
+                            }).then(function (result) {
+                                if (result.isConfirmed) {
+                                    window.location.href = '/Home/Index';
+                                }
+                            });
+                            console.error(xhr, status, error);
+                        }
+                    });
+                });
+            });                    
+        </script>
+
+        <script>
+            $(document).ready(function () {
+                $('#footer_frm_Mail').submit(function (e) {
+                    e.preventDefault(); 
+                    var formData = $(this).serialize();
+                    $.ajax({
+                        url: $(this).attr('action'),
+                        type: 'POST',
+                        data: formData,
+                        success: function (response) {
+                            if (response.success) {
+                                Swal.fire({
+                                    icon: 'success',
+                                    title: 'Success!',
+                                    text: 'Your message has been sent.',
+                                    showConfirmButton: true,
+                                    timer: 0
+                                });
+                            } else {
+                                Swal.fire({
+                                    icon: 'error',
+                                    title: 'Error!',
+                                    text: response.message
+                                });
+                            }
+                        },
+                        error: function () {
+                            Swal.fire({
+                                icon: 'error',
+                                title: 'Oops...',
+                                text: 'Something went wrong! Please try again.'
+                            });
+                        }
+                    });
+                });
+            });
+
+            $(document).ready(function () {
+                $('.shopping-cart-button').on('click', function () {
+                    $(this).find('.dropdown-content-cart').toggle();
+                });
+                $(document).on('click', function (e) {
+                    if (!$(e.target).closest('.shopping-cart-button').length) {
+                        $('.dropdown-content-cart').hide();
+                    }
+                });
+            });
+
+            function loadCart() {
+                $.ajax({
+                    url: '@Url.Action("ViewCart", "Home")',
+                    type: 'GET',
+                    success: function (data) {
+                        $('.dropdown-content-cart').html(data);
+                    },
+                    error: function (xhr, status, error) {
+                        console.error(xhr, status, error);
+                    }
+                });
+            }
+        </script>
+        @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

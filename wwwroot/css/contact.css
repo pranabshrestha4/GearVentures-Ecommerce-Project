@@ -1,0 +1,347 @@
+.navigation-bar-down {
+    top: 100px;
+    height: 51px;
+    font-size: 16px;
+    position: absolute;
+    left: 0;
+    width: 1518px;
+}
+
+.navigation-bar-down-ui {
+    background-color: #d9d9d9;
+    position: absolute;
+    top: 55px;
+    left: 0;
+    width: 1518px;
+    height: 51px;
+}
+
+.home-text {
+    position: absolute;
+    top: 75px;
+    left: 156px;
+}
+
+.contact-information {
+    position: absolute;
+    top: 211px;
+    left: 0;
+    width: 1518px;
+    height: 571px;
+    color: var(--color-whitesmoke);
+}
+
+.contact-info-box {
+    position: absolute;
+    top: -10px;
+    left: 0;
+    background-color: #092a6a;
+    width: 1518px;
+    height: 571px;
+}
+
+.map {
+    position: absolute;
+    top: 144px;
+    left: 210px;
+    width: 217px;
+    height: 265px;
+}
+
+.location-icon {
+    position: absolute;
+    top: 10px;
+    left: 53px;
+    width: 110px;
+    height: 128px;
+    object-fit: cover;
+}
+
+.location-header {
+    position: absolute;
+    top: 154px;
+    left: 0;
+    font-size: var(--font-size-17xl);
+    color: var(--color-white);
+}
+
+.location-text {
+    position: absolute;
+    top: 210px;
+    left: 0;
+    color: var(--color-white);
+}
+
+.location-text-kathmandu {
+    position: absolute;
+    top: 235px;
+    left: 20px;
+    color: var(--color-white);
+}
+
+.email {
+    position: absolute;
+    top: 116px;
+    left: 589px;
+    width: 324px;
+    height: 289px;
+}
+
+.mail-icon-white-on-grey-1 {
+    position: absolute;
+    top: 0;
+    left: 60px;
+    width: 197px;
+    height: 202px;
+    object-fit: cover;
+}
+
+.our-email-address {
+    position: absolute;
+    top: 178px;
+    left: 0;
+    font-size: var(--font-size-17xl);
+    color: var(--color-white);
+}
+
+.feel-free-to {
+    position: absolute;
+    top: 235px;
+    left: 70px;
+    color: var(--color-white);
+}
+
+.pranabshrestha4gmailcom {
+    position: absolute;
+    top: 260px;
+    left: 39px;
+    color: var(--color-white);
+}
+
+.contact1 {
+    position: absolute;
+    top: 113px;
+    left: 1044px;
+    width: 329px;
+    height: 296px;
+    font-size: var(--font-size-3xl);
+}
+
+.icon-1 {
+    position: absolute;
+    top: 10px;
+    left: 52px;
+    width: 182px;
+    height: 188px;
+    object-fit: cover;
+}
+
+.our-contact-phone {
+    position: absolute;
+    top: 181px;
+    left: 0;
+    font-size: var(--font-size-17xl);
+    color: var(--color-white);
+}
+
+.make-your-phone {
+    position: absolute;
+    top: 241px;
+    left: 50px;
+    color: var(--color-white);
+}
+
+.div {
+    position: absolute;
+    top: 266px;
+    left: 110px;
+    color: var(--color-white);
+}
+
+.message-information-container {
+    position: absolute;
+    top: 770px;
+    left: 0;
+    width: 1518px;
+    height: 595px;
+    font-size: var(--font-size-5xl);
+    background-color: #F5F5F5;
+}
+
+.map-container {
+    position: absolute;
+    width: 700px;
+    height: 588px;
+    top: 0;
+    overflow: hidden;
+}
+
+    .map-container iframe {
+        position: absolute;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+
+.header-text-2 {
+    position: absolute;
+    top: 46px;
+    left: 787px;
+    font-size: var(--font-size-17xl);
+    color: black;
+}
+
+.vertical-line {
+    position: absolute;
+    top: 98px;
+    left: 789px;
+    background-color: orange;
+    width: 92px;
+    height: 11px;
+}
+
+
+.name-header {
+    position: absolute;
+    top: 140px;
+    left: 789px;
+}
+
+
+
+.email-header {
+    position: absolute;
+    top: 140px;
+    left: 1095px;
+}
+
+.message {
+    position: absolute;
+    top: 255px;
+    left: 788px;
+}
+
+.message-box-1 {
+    position: relative;
+    width: 650px;
+    height: 180px;
+    background-color: var(--color-white);
+    border-radius: var(--br-3xs);
+    font-size: var(--font-size-sm);
+    color: var(--color-black);
+    padding: 15px;
+    box-sizing: border-box;
+    left: 785px;
+    top: 290px;
+}
+
+.message-input-1 {
+    width: 100%;
+    height: 100%;
+    border: none;
+    outline: none;
+    resize: none;
+}
+
+    .message-input-1::placeholder {
+        font-weight: bolder;
+    }
+
+
+.message-button-1 {
+    background-color: var(--color-yellow);
+    color: black;
+    width: 200px;
+    height: 40px;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.4);
+    cursor: pointer;
+    position: absolute;
+    top: 490px;
+    right: 530px;
+    z-index: 1;
+    transition: background-color 0.3s, color 0.3s, box-shadow 0.3s;
+}
+
+.message-button-text-1 {
+    font-size: 16px;
+    padding: 6px 12px;
+    font-weight: bold;
+}
+
+.message-button-1:hover {
+    background-color: black;
+    color: var(--color-yellow);
+    box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.6);
+    transform: translateY(-5px);
+    transition: background-color 0.3s, color 0.3s, box-shadow 0.3s, transform 0.3s;
+}
+
+.email-box-4 {
+    position: absolute;
+    top: 177px;
+    left: 1095px;
+    border-radius: var(--br-3xs);
+    background-color: var(--color-white);
+    width: 340px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+    .email-box-4 input {
+        border: none;
+        width: 100%;
+        height: 100%;
+        padding: 0 10px;
+        font-size: var(--font-size-sm);
+        color: var(--color-black);
+        background: transparent;
+        outline: none;
+    }
+
+        .email-box-4 input::placeholder {
+            font-weight: bold;
+        }
+
+
+.name-box {
+    position: absolute;
+    top: 177px;
+    left: 785px;
+    border-radius: var(--br-3xs);
+    background-color: var(--color-white);
+    width: 250px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+    .name-box input {
+        border: none;
+        width: 100%;
+        height: 100%;
+        padding: 0 10px;
+        font-size: var(--font-size-sm);
+        color: var(--color-black);
+        background: transparent;
+        outline: none;
+    }
+
+        .name-box input::placeholder {
+            font-weight: bold;
+        }
+
+
+.contact2 {
+    position: relative;
+    top: 6px;
+    left: 201px;
+    color: black;
+}
+
+
+

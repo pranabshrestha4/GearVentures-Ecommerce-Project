@@ -1,0 +1,228 @@
+.body-shape {
+    position: relative;
+    top: 100px;
+    left: 0;
+    background-color: #171741;
+    width: 100%;
+    height: 750px;
+}
+
+.gvn-logo-3 {
+    position: absolute;
+    top: 280px;
+    left: 79.05px;
+    width: 511.34px;
+    height: 344px;
+    object-fit: cover;
+}
+
+.about-us,
+.header {
+    position: absolute;
+    width: 285.19px;
+}
+
+.about-us {
+    top: 100px;
+    left: 0;
+    display: inline-block;
+}
+
+.header {
+    top: 165px;
+    left: 784.52px;
+    height: 74px;
+    font-size: 64px;
+    color: var(--color-yellow);
+}
+
+.header-text,
+.more-than-5 {
+    position: absolute;
+    width: 488.32px;
+}
+
+.more-than-5 {
+    top: 100px;
+    left: 0;
+    display: inline-block;
+}
+
+.header-text {
+    top: 247px;
+    left: 784.52px;
+    height: 37px;
+    font-size: 32px;
+}
+
+.the-riding-gears {
+    margin: 0;
+}
+
+.the-riding-gears-container {
+    position: absolute;
+    top: 100px;
+    left: 0;
+    display: inline-block;
+    width: 682.45px;
+    height: 151px;
+}
+
+.button,
+.paragraph {
+    position: absolute;
+    top: 315px;
+    left: 784.52px;
+    width: 682.45px;
+    height: 151px;
+}
+
+.body {
+    position: absolute;
+    width: 1518px;
+    height: 750px;
+    text-align: left;
+    font-size: var(--font-size-base);
+    color: var(--color-white);
+    font-family: var(--font-arial);
+}
+
+.contact-us-button {
+    background-color: var(--color-yellow);
+    color: black;
+    width: 150px;
+    height: 40px;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.4);
+    cursor: pointer;
+    position: absolute;
+    top: 565px;
+    right: 580px;
+    z-index: 1;
+    transition: background-color 0.3s, color 0.3s, box-shadow 0.3s;
+}
+
+.contact-us-button-text {
+    font-size: 16px;
+    padding: 6px 12px;
+    font-weight: bold;
+}
+
+.contact-us-button:hover {
+    background-color: black;
+    color: var(--color-yellow);
+    box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.6);
+    transform: translateY(-5px);
+    transition: background-color 0.3s, color 0.3s, box-shadow 0.3s, transform 0.3s;
+}
+
+.services {
+    position: absolute;
+    top: 819px;
+    left: 0;
+    width: 1518px;
+    height: 543px;
+}
+
+.service-ui {
+    position: absolute;
+    left: 0;
+    width: 1518px;
+    top: 0;
+    background-color: #05052c;
+    height: 543px;
+}
+
+.services-header {
+    position: absolute;
+    top: 55px;
+    left: 650px;
+    font-size: 50px;
+    color: var(--color-yellow);
+}
+
+.image-for-home-delivery {
+    position: absolute;
+    top: 168px;
+    left: 200px;
+    width: 247px;
+    height: 212px;
+    object-fit: cover;
+}
+
+.image-for-consulting {
+    position: absolute;
+    top: 171px;
+    left: 670px;
+    width: 188px;
+    height: 188px;
+    object-fit: cover;
+}
+
+.image-for-geniune-product {
+    position: absolute;
+    top: 171px;
+    left: 1100px;
+    width: 188px;
+    height: 188px;
+    object-fit: cover;
+}
+
+.header-for-home {
+    position: absolute;
+    top: 373px;
+    left: 255px;
+}
+
+.header-for-consulting {
+    left: 720px;
+    position: absolute;
+    top: 373px;
+}
+
+.header-for-geniune {
+    position: absolute;
+    top: 365px;
+    left: 1130px;
+}
+
+.text-for-home {
+    position: absolute;
+    top: 400px;
+    left: 173px;
+    font-size: var(--font-size-xs);
+    font-family: var(--font-inter);
+}
+
+.text-for-genuine {
+    top: 390px;
+    left: 1038px;
+    position: absolute;
+    font-size: var(--font-size-xs);
+    font-family: var(--font-inter);
+}
+
+.text-for-consulting-container {
+    top: 413px;
+    left: 593px;
+    white-space: pre-wrap;
+    font-size: var(--font-size-xs);
+    font-family: var(--font-inter);
+}
+
+.paragraph-for-consulting {
+    top: 365px;
+    left: 530px;
+    position: absolute;
+    font-size: var(--font-size-xs);
+    font-family: var(--font-inter);
+}
+
+.paragraph-for-consulting-1 {
+    top: 385px;
+    left: 590px;
+    position: absolute;
+    font-size: var(--font-size-xs);
+    font-family: var(--font-inter);
+}

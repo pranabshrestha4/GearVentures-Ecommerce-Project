@@ -1,0 +1,89 @@
+﻿@model CartViewModel
+
+@if (Model != null && Model.CartItems != null && Model.CartItems.Count > 0)
+{
+    <div id="cart">
+        <h4 style="font-size:18px;">Shopping Cart</h4>
+
+        <table class="table" style="position:relative; margin-left:15px;">
+            <thead>
+                <tr>
+                    <th>Product Name</th>
+                    <th>Price</th>
+                    <th>Photo</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var cartItem in Model.CartItems)
+                {
+                    <tr>
+                        <td>@cartItem.ProductName</td>
+                        <td>@cartItem.Price</td>
+                        <td><img src="@cartItem.PhotoUrl" alt="Product Image" style="max-width: 50px; max-height: 50px;" /></td>
+                        <td>
+                            <a onclick="removeCartItem(@cartItem.Id)">
+                                <i class="fa fa-close" style="font-size: 36px; color: red;"></i>
+                            </a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+        <p style="font-weight:bold; font-size:14px;">Subtotal: Rs
+            <span id="subtotal">0.00</span>
+        </p>
+        <a href="@Url.Action("Checkout", "Home")" class="go-to-checkout">Go to Checkout</a>
+
+    </div>
+    <script>
+        function removeCartItem(cartItemId) {
+            Swal.fire({
+                title: 'Are you sure?',
+                text: 'You won\'t be able to revert this!',
+                icon: 'warning',
+                showCancelButton: true,
+                confirmButtonColor: '#d33',
+                cancelButtonColor: '#3085d6',
+                confirmButtonText: 'Yes, remove it!'
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    $.ajax({
+                        type: 'POST',
+                        url: '/Home/RemoveFromCart',
+                        data: { cartItemId: cartItemId },
+                        success: function () {
+                            Swal.fire({
+                                title: 'Removed!',
+                                text: 'Product removed from the cart successfully.',
+                                icon: 'success'
+                            });
+                        },
+                        error: function () {
+                            alert('An error occurred while removing the item from the cart.');
+                        }
+                    });
+                }
+            });
+        }
+
+        function updateSubtotal() {
+            var subtotal = 0;
+            $(".table tbody tr").each(function () {
+                var priceString = $(this).find("td:nth-child(2)").text();
+                var priceNumeric = parseFloat(priceString.replace('$', '').replace(',', ''));
+                subtotal += priceNumeric;
+            });
+
+            $("#subtotal").text(subtotal.toFixed(2));
+        }
+        updateSubtotal();
+    </script>
+}
+else
+{
+    <p style="font-weight:bold; font-size:14px;">
+        Subtotal: Rs
+        <span id="subtotal">0.00</span>
+    </p>
+}
